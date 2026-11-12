@@ -1,0 +1,25 @@
+id,area,scenario,expected_result,status
+API_001,API,Health endpoint returns expected availability status,HTTP 201,Pending run
+API_002,API,List booking IDs,HTTP 200 and array,Pending run
+API_003,API,Create booking,HTTP 200 and dynamic ID,Pending run
+API_004,API,Read created booking,HTTP 200 and created data,Pending run
+API_005,API,Authenticate,HTTP 200 and token,Pending run
+API_006,API,Full replacement with PUT,HTTP 200 and values returned,Pending run
+API_007,API,Verify PUT,Updated values persist,Pending run
+API_008,API,Partial update with PATCH,HTTP 200 and values returned,Pending run
+API_009,API,Verify PATCH,Changed and retained values persist,Pending run
+API_010,API,Delete booking,HTTP 201,Pending run
+API_011,API,Verify deletion,HTTP 404,Pending run
+NEG_004,API,POST without lastname,Reject invalid payload; exact status to be confirmed,Pending reproduction
+DB_POS_001,Database,Insert valid booking,Record created,Pending run
+DB_POS_002,Database,Join customer and booking,Correct relation returned,Pending run
+DB_POS_003,Database,Update booking price,Value persists,Pending run
+DB_POS_004,Database,Update booking status,Value persists,Pending run
+DB_POS_005,Database,Delete booking,Record absent,Pending run
+DB_POS_006,Database,Customer remains,Customer retained,Pending run
+DB_NEG_001,Database,Duplicate email,SQLSTATE 23505,Pending run
+DB_NEG_002,Database,Missing firstname,SQLSTATE 23502,Pending run
+DB_NEG_003,Database,Negative price,SQLSTATE 23514,Pending run
+DB_NEG_004,Database,Invalid dates,SQLSTATE 23514,Pending run
+DB_NEG_005,Database,Invalid foreign key,SQLSTATE 23503,Pending run
+DB_NEG_006,Database,Invalid status,SQLSTATE 23514,Pending run

@@ -1,0 +1,21 @@
+# Secrets and local Postman data
+*.postman_environment.json
+postman/*local*.json
+postman/*private*.json
+postman/*.postman_environment.json
+.env
+.env.*
+
+# Database tooling
+*.dump
+*.backup
+
+# Local test-runner output
+newman/
+reports/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
